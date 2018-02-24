@@ -1,0 +1,5 @@
+name: Rancher Controllers
+description: |
+  A group of controllers for rancher1.x management
+version: v0.1.0
+category: Infrastructure Services
