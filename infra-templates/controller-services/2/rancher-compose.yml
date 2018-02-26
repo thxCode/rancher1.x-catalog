@@ -1,0 +1,26 @@
+.catalog:
+  name: "A group of controllers for rancher1.x management"
+  version: "v0.3.0"
+  minimum_rancher_version: v1.6.12
+  questions:
+    - variable: "RESTARTING_INTOLERABLE_INTERVAL"
+      label: "restarting intolerable interval"
+      description: "How many seconds can not be tolerated"
+      type: "int"
+      default: "600"
+      required: true
+    - variable: "RESTARTING_TOLERABLE_COUNTS"
+      label: "restarting tolerable counts"
+      description: "The number of restarts that can be tolerated in an interval that can not be tolerated"
+      type: "int"
+      default: "3"
+      required: true
+    - variable: "RESTARTING_IGNORE_LABEL"
+      label: "restarting ignore label"
+      description: "if one Container has been labeled by it, this controller will never manage this Container"
+      type: "string"
+      default: "io.rancher.restarting_controller.ignore"
+      required: true
+
+restarting-controller:
+  scale: 1
